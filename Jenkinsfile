@@ -7,7 +7,7 @@ pipeline {
                 build 'PES1UG21CS073-1'
                 echo 'Compiling the .cpp file'
                 script {
-                    sh 'g++ task5.cpp -o task5' // Compile the .cpp file using g++
+                    sh 'g++ task5.cpp -o task5'
                 }
             }
         }
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 echo 'Testing the compiled .cpp file'
                 script {
-                    sh './task5' // Run the compiled executable
+                    sh './task5'
                 }
             }
         }
@@ -24,7 +24,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
-                // Add deployment steps here
+                
             }
         }
     }
